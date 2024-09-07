@@ -9,7 +9,7 @@ package com.mycompany.algoritmosdeordenamiento;
 public class AlgoritmosDeOrdenamiento {
     int i,j,temporal;
     
-    public AlgoritmosDeOrdenamiento(){
+    public AlgoritmosDeOrdenamiento(){ 
         this.i=0;
         this.j=0;
         this.temporal=0;
