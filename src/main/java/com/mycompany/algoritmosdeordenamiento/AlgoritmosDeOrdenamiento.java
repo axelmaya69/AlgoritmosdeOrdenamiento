@@ -15,7 +15,7 @@ public class AlgoritmosDeOrdenamiento {
         this.temporal=0;
     }
     
-    
+  /*  
     public void burbuja(int [] arreglo) {
         for ( i = 0; i < arreglo.length; i++) {
             for ( j = i+1; j <arreglo.length ; j++) {
@@ -35,14 +35,14 @@ public class AlgoritmosDeOrdenamiento {
         }
         System.out.println();
     }
-    
+    */
     
     public static void main(String[] args) { 
        AlgoritmosDeOrdenamiento burbuja = new AlgoritmosDeOrdenamiento();
        int numeros[]={12,23,43,1,2,3,54,5,65,11,5};
                
-       burbuja.burbuja(numeros);
-       burbuja.mostrar(numeros);
+      // burbuja.burbuja(numeros);
+      //burbuja.mostrar(numeros);
         
         
         
