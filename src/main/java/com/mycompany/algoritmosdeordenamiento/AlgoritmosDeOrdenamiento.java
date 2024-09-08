@@ -27,32 +27,32 @@ public class AlgoritmosDeOrdenamiento {
                 }
             }
         }*/
-    public void mostrar(int[] arreglo){
+    public void mostrar(int[] arreglo) {
         int k;
-        for (k=0; k<arreglo.length;k++) {
-            System.out.print(" "+arreglo[k]+" ");
+        for (k = 0; k < arreglo.length; k++) {
+            System.out.print(" " + arreglo[k] + " ");
         }
         System.out.println();
     }
-     
+
     public void radix(int[] arreglo) {
-        int x, y, j;
+        int x, y, j; 
         for (x = Integer.SIZE - 1; x > 0; x--) {
-            int auxiliar[]= new int[arreglo.length];
-            j=0;
+            int auxiliar[] = new int[arreglo.length];
+            j = 0;
             for (int i = 0; i < arreglo.length; i++) {
-                boolean mover =arreglo[i]<<x>=0;
-                if (x==0 ? !mover : mover) {
-                    auxiliar[j]= arreglo[i];
+                boolean mover = arreglo[i] << x >= 0;
+                if (x == 0 ? !mover : mover) {
+                    auxiliar[j] = arreglo[i];
                     j++;
-                }else{
-                    arreglo[i-j]=arreglo[i];
+                } else {
+                    arreglo[i - j] = arreglo[i];
                 }
             }
-            for (i=j; i<auxiliar.length;i++) {
-                auxiliar[i]=arreglo[i-j];
+            for (i = j; i < auxiliar.length; i++) {
+                auxiliar[i] = arreglo[i - j];
             }
-            arreglo=auxiliar;
+            arreglo = auxiliar;
         }
         System.out.println("Ordenamiento con radix: ");
         mostrar(arreglo);
