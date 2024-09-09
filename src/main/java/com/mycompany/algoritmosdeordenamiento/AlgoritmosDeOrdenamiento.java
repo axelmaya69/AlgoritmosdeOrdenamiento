@@ -58,8 +58,12 @@ public class AlgoritmosDeOrdenamiento {
         mostrar(arreglo);
     }
     
-    public void quicksort(int [] arreglo){
+    public void quicksort(int [] arreglo, int primero, int ultimo){
+        int i,j,pivote,auxiliar;
+        i=primero;
+        j=ultimo;
         
+        pivote= arreglo[(primero+ultimo)/2];
     }
 
     public static void main(String[] args) {
