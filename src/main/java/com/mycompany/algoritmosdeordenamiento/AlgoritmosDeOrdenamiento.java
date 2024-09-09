@@ -41,8 +41,8 @@ public class AlgoritmosDeOrdenamiento {
             int auxiliar[] = new int[arreglo.length];
             j = 0;
             for (int i = 0; i < arreglo.length; i++) {
-                boolean mover = arreglo[i] << x >= 0;
-                if (x == 0 ? !mover : mover) {
+                boolean mover = arreglo[i] << x >= 0; //indica la cantidad de bits a desplazarse
+                if (x == 0 ? !mover : mover) { //
                     auxiliar[j] = arreglo[i];
                     j++;
                 } else {
