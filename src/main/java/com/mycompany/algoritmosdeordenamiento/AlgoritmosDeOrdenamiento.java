@@ -64,6 +64,25 @@ public class AlgoritmosDeOrdenamiento {
         j=ultimo;
         
         pivote= arreglo[(primero+ultimo)/2];
+        
+        
+        do{
+            
+            while(arreglo[i]<pivote){
+                i++;
+            }
+            while(arreglo[j]>pivote){
+                j--;
+            }
+            if(i<=j){
+                auxiliar=arreglo[i];
+                arreglo[i]=arreglo[j];
+                arreglo[j]=auxiliar;
+                i++;
+                j--;
+            }
+        }while(i<=j);
+        if()
     }
 
     public static void main(String[] args) {
