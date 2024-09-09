@@ -57,6 +57,10 @@ public class AlgoritmosDeOrdenamiento {
         System.out.println("Ordenamiento con radix: ");
         mostrar(arreglo);
     }
+    
+    public void quicksort(int [] arreglo){
+        
+    }
 
     public static void main(String[] args) {
         //AlgoritmosDeOrdenamiento burbuja = new AlgoritmosDeOrdenamiento();
