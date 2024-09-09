@@ -82,16 +82,25 @@ public class AlgoritmosDeOrdenamiento {
                 j--;
             }
         }while(i<=j);
-        if()
+        if(primero<j){
+            quicksort(arreglo, primero, j);
+        }
+        if (i<ultimo) {
+            quicksort(arreglo, i, ultimo);
+            
+        }
+        mostrar(arreglo);
     }
 
     public static void main(String[] args) {
         //AlgoritmosDeOrdenamiento burbuja = new AlgoritmosDeOrdenamiento();
-        AlgoritmosDeOrdenamiento radix = new AlgoritmosDeOrdenamiento();
+        //AlgoritmosDeOrdenamiento radix = new AlgoritmosDeOrdenamiento();
+        AlgoritmosDeOrdenamiento quicksort = new AlgoritmosDeOrdenamiento();
         int numeros[] = {12, 23, 43, 1, 2, 3, 54, 5, 65, 11, 5};
 
         // burbuja.burbuja(numeros);
         //burbuja.mostrar(numeros);
-        radix.radix(numeros);
+        //radix.radix(numeros);
+        quicksort.quicksort(numeros, 0, numeros.length-1);
     }
 }
