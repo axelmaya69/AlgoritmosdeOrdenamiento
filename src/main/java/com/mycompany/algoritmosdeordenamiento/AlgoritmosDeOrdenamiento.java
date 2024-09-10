@@ -1,5 +1,7 @@
 package com.mycompany.algoritmosdeordenamiento;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author axelmaya
@@ -36,7 +38,7 @@ public class AlgoritmosDeOrdenamiento {
     }
 
     public void radix(int[] arreglo) {
-        int x, y, j; 
+        int x, y, j;
         for (x = Integer.SIZE - 1; x > 0; x--) {
             int auxiliar[] = new int[arreglo.length];
             j = 0;
@@ -57,50 +59,50 @@ public class AlgoritmosDeOrdenamiento {
         System.out.println("Ordenamiento con radix: ");
         mostrar(arreglo);
     }
-    
-    public void quicksort(int [] arreglo, int primero, int ultimo){
-        int i,j,pivote,auxiliar;
-        i=primero;
-        j=ultimo;
-        
-        pivote= arreglo[(primero+ultimo)/2];
-        
-        
-        do{
-            
-            while(arreglo[i]<pivote){
+
+    public void quicksort(int[] arreglo, int primero, int ultimo) {
+        int i, j, pivote, auxiliar;
+        i = primero;
+        j = ultimo;
+
+        pivote = arreglo[(primero + ultimo) / 2];
+
+        do {
+
+            while (arreglo[i] < pivote) {
                 i++;
             }
-            while(arreglo[j]>pivote){
+            while (arreglo[j] > pivote) {
                 j--;
             }
-            if(i<=j){
-                auxiliar=arreglo[i];
-                arreglo[i]=arreglo[j];
-                arreglo[j]=auxiliar;
+            if (i <= j) {
+                auxiliar = arreglo[i];
+                arreglo[i] = arreglo[j];
+                arreglo[j] = auxiliar;
                 i++;
                 j--;
             }
-        }while(i<=j);
-        if(primero<j){
+        } while (i <= j);
+        if (primero < j) {
             quicksort(arreglo, primero, j);
         }
-        if (i<ultimo) {
+        if (i < ultimo) {
             quicksort(arreglo, i, ultimo);
-            
+
         }
         mostrar(arreglo);
     }
-    public void insercion(int[] arreglo, int n){
-        int i,j,auxiliar;
+
+    public void insercion(int[] arreglo, int n) {
+        int i, j, auxiliar;
         for (i = 1; i < n; i++) {
-            auxiliar=arreglo[i];
-            j=i-1;
-            while(j>=0 && arreglo[j]> auxiliar){
-                arreglo[j+1]=arreglo[j];
-                j=j-1;
+            auxiliar = arreglo[i];
+            j = i - 1;
+            while (j >= 0 && arreglo[j] > auxiliar) {
+                arreglo[j + 1] = arreglo[j];
+                j = j - 1;
             }
-            arreglo[j+1]=auxiliar;
+            arreglo[j + 1] = auxiliar;
         }
         mostrar(arreglo);
     }
@@ -108,12 +110,21 @@ public class AlgoritmosDeOrdenamiento {
     public static void main(String[] args) {
         //AlgoritmosDeOrdenamiento burbuja = new AlgoritmosDeOrdenamiento();
         //AlgoritmosDeOrdenamiento radix = new AlgoritmosDeOrdenamiento();
-        AlgoritmosDeOrdenamiento quicksort = new AlgoritmosDeOrdenamiento();
-        int numeros[] = {12, 23, 43, 1, 2, 3, 54, 5, 65, 11, 5};
+        //AlgoritmosDeOrdenamiento quicksort = new AlgoritmosDeOrdenamiento();
+        AlgoritmosDeOrdenamiento insercion = new AlgoritmosDeOrdenamiento();
+        //int numeros[] = {12, 23, 43, 1, 2, 3, 54, 5, 65, 11, 5};
 
         // burbuja.burbuja(numeros);
         //burbuja.mostrar(numeros);
         //radix.radix(numeros);
-        quicksort.quicksort(numeros, 0, numeros.length-1);
+        //quicksort.quicksort(numeros, 0, numeros.length-1);
+        int tam;
+        tam = Integer.parseInt(JOptionPane.showInputDialog(null, "Numeros "));
+        int vector[] = new int[tam];
+        for (int i = 0; i < tam; i++) {
+            vector[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "ingresa: " + i));
+            insercion.insercion(vector, i+1);
+        }
+
     }
 }
