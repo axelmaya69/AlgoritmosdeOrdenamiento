@@ -91,8 +91,11 @@ public class AlgoritmosDeOrdenamiento {
         }
         mostrar(arreglo);
     }
-    public void insercion(){
-        
+    public void insercion(int[] arreglo, int n){
+        int i,j,auxiliar;
+        for (i = 1; i < n; i++) {
+            auxiliar=arreglo[i];
+        }
     }
 
     public static void main(String[] args) {
