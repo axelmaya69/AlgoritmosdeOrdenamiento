@@ -95,7 +95,14 @@ public class AlgoritmosDeOrdenamiento {
         int i,j,auxiliar;
         for (i = 1; i < n; i++) {
             auxiliar=arreglo[i];
+            j=i-1;
+            while(j>=0 && arreglo[j]> auxiliar){
+                arreglo[j+1]=arreglo[j];
+                j=j-1;
+            }
+            arreglo[j+1]=auxiliar;
         }
+        mostrar(arreglo);
     }
 
     public static void main(String[] args) {
