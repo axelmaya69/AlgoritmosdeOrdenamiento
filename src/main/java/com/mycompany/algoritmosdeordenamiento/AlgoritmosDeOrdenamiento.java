@@ -91,6 +91,9 @@ public class AlgoritmosDeOrdenamiento {
         }
         mostrar(arreglo);
     }
+    public void insercion(){
+        
+    }
 
     public static void main(String[] args) {
         //AlgoritmosDeOrdenamiento burbuja = new AlgoritmosDeOrdenamiento();
