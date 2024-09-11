@@ -105,9 +105,22 @@ public class AlgoritmosDeOrdenamiento {
             arreglo[j + 1] = auxiliar;
         }
         mostrar(arreglo);
+        
     }
     
-    public void shell(){
+    public void shell(int [] arreglo){
+        int salto,i,j,k,auxiliar;
+        salto= arreglo.length/2;
+        
+        while(salto>0){
+            for (i=salto;i<arreglo.length; i++) {
+                j=i-salto;
+                while(j>=0){
+                    k=j+salto;
+                }
+                
+            }
+        }
         
     }
 
