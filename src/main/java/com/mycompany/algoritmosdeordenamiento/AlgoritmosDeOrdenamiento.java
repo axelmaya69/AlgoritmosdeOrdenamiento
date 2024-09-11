@@ -117,10 +117,20 @@ public class AlgoritmosDeOrdenamiento {
                 j=i-salto;
                 while(j>=0){
                     k=j+salto;
+                    if(arreglo[j]<=arreglo[k]){
+                        j=-1;
+                    }else{
+                        auxiliar=arreglo[j];
+                        arreglo[j]=arreglo[k];
+                        arreglo[k]=auxiliar;
+                        j-=salto;
+                    }
                 }
                 
             }
+            salto=salto/2;
         }
+        mostrar(arreglo);
         
     }
 
@@ -128,20 +138,23 @@ public class AlgoritmosDeOrdenamiento {
         //AlgoritmosDeOrdenamiento burbuja = new AlgoritmosDeOrdenamiento();
         //AlgoritmosDeOrdenamiento radix = new AlgoritmosDeOrdenamiento();
         //AlgoritmosDeOrdenamiento quicksort = new AlgoritmosDeOrdenamiento();
-        AlgoritmosDeOrdenamiento insercion = new AlgoritmosDeOrdenamiento();
-        //int numeros[] = {12, 23, 43, 1, 2, 3, 54, 5, 65, 11, 5};
-
+        //AlgoritmosDeOrdenamiento insercion = new AlgoritmosDeOrdenamiento();
+        AlgoritmosDeOrdenamiento shell = new AlgoritmosDeOrdenamiento();
+        int numeros[] = {12, 23, 43, 1, 2, 3, 54, 5, 65, 11, 5};
+        
+        
+        shell.shell(numeros);
         // burbuja.burbuja(numeros);
         //burbuja.mostrar(numeros);
         //radix.radix(numeros);
         //quicksort.quicksort(numeros, 0, numeros.length-1);
-        int tam;
+      /*  int tam;
         tam = Integer.parseInt(JOptionPane.showInputDialog(null, "Numeros "));
         int vector[] = new int[tam];
         for (int i = 0; i < tam; i++) {
             vector[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "ingresa: " + i));
             insercion.insercion(vector, i+1);
         }
-
+*/
     }
 }
